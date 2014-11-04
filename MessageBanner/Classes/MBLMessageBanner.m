@@ -483,6 +483,14 @@ static struct delegateMethodsCaching {
     CGPoint target = [self calculateTargetCenter:currentMessageBanner];
     [self attachBannerConstraints:currentMessageBanner onViewController:[self getParentViewController:currentMessageBanner]];
     
+    //Fix for top
+    CGRect currentMessageBannerOriginalFrame = currentMessageBanner.frame;
+    currentMessageBannerOriginalFrame.origin.x = target.x - currentMessageBannerOriginalFrame.size.width/2.0f;
+    currentMessageBannerOriginalFrame.origin.y = -currentMessageBannerOriginalFrame.size.height;
+    currentMessageBanner.frame = currentMessageBannerOriginalFrame;
+    //End fix
+    
+    
     [UIView animateKeyframesWithDuration:ANIMATION_DURATION delay:0.0f options:UIViewAnimationOptionCurveEaseInOut | UIViewAnimationOptionBeginFromCurrentState | UIViewAnimationOptionAllowUserInteraction animations:^{
         
         
