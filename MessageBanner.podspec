@@ -9,7 +9,7 @@
 
 Pod::Spec.new do |s|
   s.name             = "MessageBanner"
-  s.version          = "1.0.2"
+  s.version          = "1.0.3"
   s.summary          = "iOS Notification / Message easy to use and fully customisable"
   s.description      = <<-DESC
 
@@ -27,7 +27,7 @@ Pod::Spec.new do |s|
 
   s.license          = 'MIT'
   s.author           = { "Thibault Carpentier" => "carpen_t@epitech.eu" }
-  s.source           = { :git => "https://github.com/Loadex/MessageBanner.git", :tag => s.version.to_s }
+  s.source           = { :git => "https://github.com/bcharp/MessageBanner.git", :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
   s.platform     = :ios, '7.0'
